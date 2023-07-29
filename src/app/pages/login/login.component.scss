@@ -18,16 +18,16 @@
 .form-container {
   border-radius: var(--radius-s-1);
   background-color: rgba(255, 255, 255, 0.15);
-  padding: var(--spc-s-4);
+  padding: var(--spc-s-3);
   display: flex;
   flex-direction: column;
-  gap: var(--radius-s-1);
+  gap: var(--spc-m-2);
   width: 24vw;
   backdrop-filter: blur(5px);
   .fields {
     display: flex;
     flex-direction: column;
-    gap: var(--spc-s-3);
+    gap: var(--spc-s-2);
   }
 }
 
@@ -37,23 +37,24 @@
   justify-content: center;
   align-items: center;
   color: var(--primary-white);
-  gap: var(--spc-s-1);
+  gap: var(--spc-xs-4);
 }
 .title-container {
   display: flex;
   flex-direction: column;
-  gap: var(--spc-s-3);
+  gap: var(--spc-s-2);
 }
 .form {
   display: flex;
   flex-direction: column;
-  gap: var(--spc-s-4);
-}
-.fields {
-  display: flex;
-  flex-direction: column;
   gap: var(--spc-s-3);
+  .fields {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spc-s-2);
+  }
 }
+
 p {
   color: var(--primary-white);
 }
