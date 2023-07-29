@@ -28,9 +28,15 @@
   --spc-s-1: 16px;
   --spc-s-2: 24px;
   --spc-s-3: 32px;
-  --spc-s-4: 48px;
-  --spc-m-1: 56px;
-  --spc-m-2: 64px;
+  --spc-s-4: 40px;
+  --spc-m-1: 48px;
+  --spc-m-2: 56px;
+  --spc-m-3: 64px;
+  --spc-m-4: 72px;
+  --spc-l-1: 80px;
+  --spc-l-2: 88px;
+  --spc-l-3: 96px;
+  --spc-l-4: 104px;
   --radius-xs-1: 2px;
   --radius-xs-2: 4px;
   --radius-xs-3: 8px;
@@ -38,9 +44,9 @@
   --radius-s-1: 16px;
   --radius-s-2: 24px;
   --radius-s-3: 32px;
-  --radius-s-4: 48px;
-  --radius-m-1: 56px;
-  --radius-m-2: 64px;
+  --radius-s-4: 40px;
+  --radius-m-1: 48px;
+  --radius-m-2: 56px;
 
   --gray-50: #f9f9fa;
   --gray-100: #f2f2f4;
@@ -188,6 +194,14 @@ p {
     background-color: var(--btn-primary-bg-disabled) !important;
     color: var(--btn-primary-t-disabled) !important;
   }
+}
+.icon-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .link {
   color: var(--link-t-active);

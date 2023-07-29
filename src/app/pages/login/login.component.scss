@@ -11,6 +11,7 @@
 
 .social-login {
   display: flex;
+  gap: var(--spc-m-1);
   justify-content: center;
 }
 
@@ -36,6 +37,22 @@
   justify-content: center;
   align-items: center;
   color: var(--primary-white);
+  gap: var(--spc-s-1);
+}
+.title-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spc-s-3);
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spc-s-4);
+}
+.fields {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spc-s-3);
 }
 p {
   color: var(--primary-white);

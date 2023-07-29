@@ -1,55 +1,62 @@
 <div class="content-container">
   <img src="../../../assets/images/Logo.svg" alt="" />
   <form action="" class="form-container">
-    <span class="main-text">
-      <h1>Bienvenido</h1>
-      <p>Qué bueno verte otra vez</p>
-    </span>
-    <div class="social-login">
-      <button mat-icon-button type="button" (click)="loginWithFacebook()">
-        <img src="assets/images/logos_facebook.svg" alt="" class="icon" />
-      </button>
-      <button mat-icon-button type="button" (click)="loginWithGoogle()">
-        <mat-icon>
+    <div class="title-container">
+      <span class="main-text">
+        <h1>Bienvenido</h1>
+        <p>Qué bueno verte otra vez</p>
+      </span>
+      <div class="social-login">
+        <button class="icon-btn" type="button" (click)="loginWithFacebook()">
+          <img src="assets/images/logos_facebook.svg" alt="" class="icon" />
+        </button>
+        <button class="icon-btn" type="button" (click)="loginWithGoogle()">
           <img src="assets/images/flat-color-icons_google.svg" alt="" />
-        </mat-icon>
-      </button>
+        </button>
+      </div>
     </div>
-    <mat-form-field appearance="outline">
-      <mat-label>Correo</mat-label>
-      <input matInput required [formControl]="email" />
-      <mat-error *ngIf="email.hasError('required')">
-        Campo requerido
-      </mat-error>
-      <mat-error *ngIf="email.hasError('email')"> Correo no válido </mat-error>
-    </mat-form-field>
-    <mat-form-field appearance="outline">
-      <mat-label>Contraseña</mat-label>
-      <input matInput type="password" [formControl]="password" />
-      <mat-error *ngIf="password.hasError('required')">
-        Campo requerido
-      </mat-error>
-    </mat-form-field>
-    <a href="#" class="link">¿Olvidaste tu contraseña?</a>
-    <button
-      type="button"
-      class="btn btn-primary btn-lg"
-      mat-raised-button
-      color="primary"
-      (click)="onSubmit()"
-    >
-      Iniciar sesión
-    </button>
-    <!-- <button type="submit" class="btn btn-sm" mat-stroked-button>stroked</button>
+    <div class="form">
+      <div class="fields">
+        <mat-form-field appearance="outline">
+          <mat-label>Correo</mat-label>
+          <input matInput required [formControl]="email" />
+          <mat-error *ngIf="email.hasError('required')">
+            Campo requerido
+          </mat-error>
+          <mat-error *ngIf="email.hasError('email')">
+            Correo no válido
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Contraseña</mat-label>
+          <input matInput type="password" [formControl]="password" />
+          <mat-error *ngIf="password.hasError('required')">
+            Campo requerido
+          </mat-error>
+        </mat-form-field>
+        <a href="#" class="link">¿Olvidaste tu contraseña?</a>
+      </div>
+      <button
+        type="button"
+        class="btn btn-primary btn-lg"
+        mat-raised-button
+        color="primary"
+        (click)="onSubmit()"
+      >
+        Iniciar sesión
+      </button>
+
+      <!-- <button type="submit" class="btn btn-sm" mat-stroked-button>stroked</button>
     <button mat-button class="btn btn-sm">Basic</button> -->
-    <div class="first-login">
-      <!-- <ul>
+      <div class="first-login">
+        <!-- <ul>
         <li *ngFor="let item of item$ | async">
           {{ item.items }}
         </li>
       </ul> -->
-      <p>¿Es la primera vez que usas dodo?</p>
-      <a href="" class="link">registrate</a>
+        <p>¿Es la primera vez que usas dodo?</p>
+        <a href="" class="link">registrate</a>
+      </div>
     </div>
   </form>
 </div>
