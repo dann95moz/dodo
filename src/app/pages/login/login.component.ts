@@ -3,8 +3,8 @@ import {  FormControl, Validators } from '@angular/forms'
 import { Router } from '@angular/router';
 import { Firestore, collectionData, collection } from '@angular/fire/firestore';
 import { Observable, tap } from 'rxjs';
-import { Auth } from '@angular/fire/auth';
-import { GoogleAuthProvider, signInWithPopup, FacebookAuthProvider } from 'firebase/auth';
+import { Auth  } from '@angular/fire/auth';
+import { GoogleAuthProvider, signInWithPopup, FacebookAuthProvider, signInWithEmailAndPassword, EmailAuthProvider } from 'firebase/auth';
 @Component({
   selector: 'login',
   templateUrl: './login.component.html',
@@ -25,16 +25,23 @@ export class LoginComponent implements OnInit {
   firestore: Firestore = inject(Firestore);
   loginWithFacebook() {
     const provider = new FacebookAuthProvider()
-    signInWithPopup(this.auth, provider).then((response) => { console.log(response);
+    signInWithPopup(this.auth, provider).then((response) => {
+      this.router.navigate(['home/courses']);
+      console.log(response);
     })
   }
   loginWithGoogle() {
     const provider = new GoogleAuthProvider()
-    signInWithPopup(this.auth, provider).then((response) => { console.log(response);
+    signInWithPopup(this.auth, provider).then((response) => { 
+      this.router.navigate(['home/courses']);
+
     })
   }
  onSubmit () {
-   
+   signInWithEmailAndPassword(this.auth, String(this.email.value), String(this.password.value)).then((response) => {
+    this.router.navigate(['home/courses']);
+     console.log(response);
+   })
           // ..
       };
 
