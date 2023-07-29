@@ -6,11 +6,13 @@
       <p>Qué bueno verte otra vez</p>
     </span>
     <div class="social-login">
-      <button mat-icon-button type="button" (click)="loginWithGoogle()">
-        <img src="assets/images/google.png" alt="" />
-      </button>
       <button mat-icon-button type="button" (click)="loginWithFacebook()">
-        <img src="assets/images/facebook.png" alt="" />
+        <img src="assets/images/logos_facebook.svg" alt="" class="icon" />
+      </button>
+      <button mat-icon-button type="button" (click)="loginWithGoogle()">
+        <mat-icon>
+          <img src="assets/images/flat-color-icons_google.svg" alt="" />
+        </mat-icon>
       </button>
     </div>
     <mat-form-field appearance="outline">
