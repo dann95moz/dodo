@@ -1,0 +1,88 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use "@angular/material" as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+/* For use in src/lib/core/theming/_palette.scss */
+$md-mcgpalette0: (
+  50: #e0f8e8,
+  100: #b3efc5,
+  200: #80e49e,
+  300: #4dd977,
+  400: #26d059,
+  500: #00c83c,
+  600: #00c236,
+  700: #00bb2e,
+  800: #00b427,
+  900: #00a71a,
+  A100: #d1ffd5,
+  A200: #9effa7,
+  A400: #6bff78,
+  A700: #52ff61,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+
+$dodoAngular-primary: mat.define-palette($md-mcgpalette0);
+$dodoAngular-accent: mat.define-palette($md-mcgpalette0, A200, A100, A400);
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+  color: white;
+}
+// The warn palette is optional (defaults to red).
+$dodoAngular-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$dodoAngular-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $dodoAngular-primary,
+      accent: $dodoAngular-accent,
+      warn: $dodoAngular-warn,
+    ),
+  )
+);
+$dodoAngular-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: $dodoAngular-primary,
+      accent: $dodoAngular-accent,
+      warn: $dodoAngular-warn,
+    ),
+  )
+);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($dodoAngular-theme);
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+}
