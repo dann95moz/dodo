@@ -1,1 +1,181 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+    --primary-white: #ffffff
+    --primary-black: #242521
+
+    --btn-primary-t-active: var(--primary-white)
+    --btn-primary-t-disabled: var(--gray-600)
+    --btn-tertiary-t-disabled: var(--gray-200)
+
+    --btn-primary-bg-active: var(--green-400)
+    --btn-primary-bg-hover: var(--green-300)
+    --btn-primary-bg-disabled: var(--gray-200)
+    --btn-primary-bg-pressed: var(--green-800)
+
+    --btn-tertiary-bg-hover: var(--gray-200)
+    --btn-tertiary-bg-pressed: var(--gray-300)
+
+    --link-t-active: var(--green-400)
+
+    --icon-white: --primary-white
+    --icon-black: --primary-black
+    --icon-gray: --gray-600
+    --spc-xs-1: 2px
+    --spc-xs-2: 4px
+    --spc-xs-3: 8px
+    --spc-xs-4: 12px
+    --spc-s-1: 16px
+    --spc-s-2: 24px
+    --spc-s-3: 32px
+    --spc-s-4: 48px
+    --spc-m-1: 56px
+    --spc-m-2: 64px
+    --radius-xs-1: 2px
+    --radius-xs-2: 4px
+    --radius-xs-3: 8px
+    --radius-xs-4: 12px
+    --radius-s-1: 16px
+    --radius-s-2: 24px
+    --radius-s-3: 32px
+    --radius-s-4: 48px
+    --radius-m-1: 56px
+    --radius-m-2: 64px
+ 
+    --gray-50: #F9F9FA
+    --gray-100: #F2F2F4
+    --gray-200: #D9DADD
+    --gray-300: #B3B5B8
+    --gray-400: #97999B
+    --gray-500: #7D7F82
+    --gray-600: #727476
+    --gray-700: #595A5C
+    --gray-800: #454648
+    --gray-900: #353537
+    --yellow-50: #FFFBE6
+    --yellow-100: #FEF4BF
+    --yellow-200: #FEED95
+    --yellow-300: #FEE66B
+    --yellow-400: #FDE04B
+    --yellow-500: #FDDB2B
+    --yellow-600: #FDD726
+    --yellow-700: #FCD220
+    --yellow-800: #FCCD1A
+    --yellow-900: #977F02
+    --green-50: #E0F8E8
+    --green-100: #B3EFC5
+    --green-200: #80E49E
+    --green-300: #4DD977
+    --green-400: #26D059
+    --green-500: #00C83C
+    --green-600: #00C236
+    --green-700: #00BB2E
+    --green-800: #00B427
+    --green-900: #00A71A
+    --blue-50:  #EAF8FC
+    --blue-100: #CBEFF8
+    --blue-200: #A8E4F3
+    --blue-300: #85D9EE
+    --blue-400: #6AD0EB
+    --blue-500: #50C8E7
+    --blue-600: #49C2E4
+    --blue-700: #40BBE0
+    --blue-800: #37B4DD
+    --blue-900: #27A7D7
+    --indigo-50: #F2ECF9
+    --indigo-100: #DED1F0
+    --indigo-200: #C8B2E7
+    --indigo-300: #B293DD
+    --indigo-400: #A27BD5
+    --indigo-500: #9164CE
+    --indigo-600: #895CC9
+    --indigo-700: #7E52C2
+    --indigo-800: #7448BC
+    --indigo-900: #6236B0
+    --orange-50: #FFEEE7
+    --orange-100: #FFD6C2
+    --orange-200: #FFBA99
+    --orange-300: #FF9E70
+    --orange-400: #FF8A52
+    --orange-500: #FF7533
+    --orange-600: #FF6D2E
+    --orange-700: #FF6227
+    --orange-800: #FF5820
+    --orange-900: #FF4514
+    --rose-50: #FCE9F1
+    --rose-100: #F8C9DC
+    --rose-200: #F3A5C4
+    --rose-300: #EE81AC
+    --rose-400: #EB669B
+    --rose-500: #E74B89
+    --rose-600: #E44481
+    --rose-700: #E03B76
+    --rose-800: #DD336C
+    --rose-900: #D72359
+    --red-50: #FCE1E1
+    --red-100: #F6B3B3
+    --red-200: #F18180
+    --red-300: #EB4E4D
+    --red-400: #E62827
+    --red-500: #E20201
+    --red-600: #DF0201
+    --red-700: #DA0101
+    --red-800: #D60101
+    --red-900: #CF0100
+
+}
+html * {
+  font-family: roboto
+}
+
+body, div, p, ul, li, table, tr, td, th,h1, h2, h3, h4, h5, h6, p {
+  margin: 0}
+h1 {
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Roboto;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+p{
+    font-size: 14px
+}
+.btn{
+    font-weight: 500 !important;
+    border-radius: var(--radius-s-4) !important
+}
+.btn-sm{
+    padding: var(--spc-xs-4) var(--spc-s-2) !important;
+    gap: var(--spc-xs-4, 8px) !important;
+    font-size: 1rem !important}
+.btn-md{
+    padding: var(--spc-s-1) var(--spc-s-3) !important;
+    gap: var(--spc-xs-4, 8px) !important;
+    font-size: 1.125rem !important}
+.btn-lg{
+    padding: var(--spc-s-2) var(--spc-s-4) !important;
+    gap: var(--spc-xs-4)   !important;
+    font-size: 1.25rem !important}
+
+
+.btn-primary{
+    color: var(--primary-white) !important;
+    &:hover{
+        background-color: var(--btn-primary-bg-hover) !important}
+    &:active{
+        background-color: var(--btn-primary-bg-pressed) !important}
+    &:disabled{
+        background-color: var(--btn-primary-bg-disabled) !important}
+        color: var(--btn-primary-t-disabled) !important
+}
+.link{
+    color: var(--link-t-active);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: none;
+    &:hover{
+        text-decoration: underline}
+      }

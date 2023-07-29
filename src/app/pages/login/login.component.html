@@ -1,0 +1,48 @@
+<div class="content-container">
+  <img src="../../../assets/images/Logo.svg" alt="" />
+  <form action="" class="form-container">
+    <span class="main-text">
+      <h1>Bienvenido</h1>
+      <p>Qué bueno verte otra vez</p>
+    </span>
+    <div class="social-login">
+      <button mat-icon-button type="button" (click)="loginWithGoogle()">
+        <img src="assets/images/google.png" alt="" />
+      </button>
+      <button mat-icon-button type="button" (click)="loginWithFacebook()">
+        <img src="assets/images/facebook.png" alt="" />
+      </button>
+    </div>
+    <mat-form-field appearance="outline">
+      <mat-label>Correo</mat-label>
+      <input matInput required [formControl]="email" />
+      <mat-error *ngIf="email.hasError('required')">
+        Campo requerido
+      </mat-error>
+      <mat-error *ngIf="email.hasError('email')"> Correo no válido </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Contraseña</mat-label>
+      <input matInput type="password" [formControl]="password" />
+      <mat-error *ngIf="password.hasError('required')">
+        Campo requerido
+      </mat-error>
+    </mat-form-field>
+    <a href="#" class="link">¿Olvidaste tu contraseña?</a>
+    <button
+      type="button"
+      class="btn btn-primary btn-lg"
+      mat-raised-button
+      color="primary"
+      (click)="onSubmit()"
+    >
+      Iniciar sesión
+    </button>
+    <!-- <button type="submit" class="btn btn-sm" mat-stroked-button>stroked</button>
+    <button mat-button class="btn btn-sm">Basic</button> -->
+    <div class="first-login">
+      <p>¿Es la primera vez que usas dodo?</p>
+      <a href="" class="link">registrate</a>
+    </div>
+  </form>
+</div>
